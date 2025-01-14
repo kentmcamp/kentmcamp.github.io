@@ -42,6 +42,9 @@ button a {
 
 .contact-info {
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Adds space between the buttons */
 }
 
 .contact-info p {
@@ -62,10 +65,27 @@ button a {
   margin: 0 1rem;
   color: #4AE4FF;
   font-size: 2rem;
-  transition: color 0.25s, transform 0.25s;
+  transition: color 0.25s, transform 0.25s ease;
+  display: inline-block; /* Ensures proper scaling */
 }
 
 .icon-link:hover {
   color: #3AC4DF;
   transform: scale(1.2);
+  transform-origin: center; /* Ensures scaling happens from the center */
+}
+.small-button {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
